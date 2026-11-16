@@ -1,0 +1,50 @@
+{
+  "source_rows": {
+    "customers": 99441,
+    "orders": 99441,
+    "order_items": 112650,
+    "products": 32951,
+    "sellers": 3095,
+    "order_payments": 103886,
+    "order_reviews": 99224,
+    "category_translation": 71
+  },
+  "scope_all_orders": 99092,
+  "scope_delivered": 96211,
+  "missing_items_delivered": 0,
+  "delivered_without_payment": 0,
+  "delivered_without_valid_review": 643,
+  "status_counts": {
+    "delivered": 96211,
+    "shipped": 1097,
+    "processing": 299,
+    "canceled": 580,
+    "invoiced": 296,
+    "unavailable": 602,
+    "approved": 2,
+    "created": 5
+  },
+  "scope_sales_brl": 13181027.13,
+  "scope_aov_brl": 137.0,
+  "top_3_sales_months": [
+    "2017-11",
+    "2018-05",
+    "2018-04"
+  ],
+  "2017_2018_jan_aug_sales_growth_pct": 141.13,
+  "month_best_sales": "2017-11",
+  "week_best_sales_per_calendar_day": "Monday",
+  "orders_duplicate_order_id": 0,
+  "customers_duplicate_customer_id": 0,
+  "products_duplicate_product_id": 0,
+  "sellers_duplicate_seller_id": 0,
+  "orders_without_customer": 0,
+  "item_without_order": 0,
+  "review_orders_multiple_rows": 547,
+  "invalid_review_scores": 0,
+  "items_negative_price": 0,
+  "orders_min_max_purchase": [
+    "2016-09-04 21:15:19",
+    "2018-10-17 17:30:18"
+  ]
+}
