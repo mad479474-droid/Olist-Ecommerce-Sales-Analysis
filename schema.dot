@@ -1,0 +1,20 @@
+digraph Olist {
+  graph [bgcolor="white",pad="0.25",ranksep=0.7,nodesep=0.45,splines=polyline];
+  node [shape=record,style="rounded,filled",color="#B5C9CC",fillcolor="#EDF4F4",fontname="DejaVu Sans",fontsize=11];
+  edge [fontname="DejaVu Sans",fontsize=9,color="#35796F",arrowsize=0.7];
+  customers [label="{CUSTOMERS|PK customer_id|customer_unique_id|customer_state}"];
+  orders [label="{ORDERS|PK order_id|FK customer_id|purchase_timestamp|order_status}",fillcolor="#D7EAE6"];
+  order_items [label="{ORDER_ITEMS|PK order_id + order_item_id|FK product_id|FK seller_id|price + freight_value}"];
+  products [label="{PRODUCTS|PK product_id|FK category_name}"];
+  sellers [label="{SELLERS|PK seller_id|seller_state}"];
+  order_payments [label="{ORDER_PAYMENTS|PK order_id + sequence|payment_value}"];
+  order_reviews [label="{ORDER_REVIEWS|PK source_review_row_index|review_id|FK order_id|review_score}"];
+  category_translation [label="{CATEGORY_TRANSLATION|PK category_name|English name}"];
+  customers -> orders [label="1 → many"];
+  orders -> order_items [label="1 → many"];
+  orders -> order_payments [label="1 → many"];
+  orders -> order_reviews [label="1 → many"];
+  products -> order_items [label="1 → many"];
+  sellers -> order_items [label="1 → many"];
+  category_translation -> products [label="1 → many",style=dashed];
+}

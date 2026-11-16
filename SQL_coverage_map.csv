@@ -1,0 +1,15 @@
+SQL topic,Question ID,SQL file,Analytical purpose
+3+ table joins,A4,03_analysis.sql,Orders plus items plus products plus category translation
+LEFT JOIN preserve unmatched,G3,03_analysis.sql,Order coverage and missing payment/reviews
+Advanced join / self join,A6,03_analysis.sql,Daily sales versus same date seven days earlier
+Scalar subquery,G1,03_analysis.sql,All order denominator in status percentages
+Multi-row subquery,A4,03_analysis.sql,Find orders in highest-revenue months
+Derived table,G3,03_analysis.sql,Preaggregate payment records by order
+Correlated subquery,A3,03_analysis.sql,Compare each date to its own calendar month mean
+EXISTS and NOT EXISTS,G3,03_analysis.sql,Valid review and payment absence
+CTE multi-stage,G2,03_analysis.sql,Date spine and monthly aggregation and comparison
+CTE second use,A7,03_analysis.sql,Calendar month halves and order summaries
+Window ranking,A4,03_analysis.sql,DENSE_RANK category revenue per month
+Window LAG,G2,03_analysis.sql,Month over month growth
+Window aggregate SUM OVER,G2,03_analysis.sql,Running merchandise revenue
+FULL OUTER JOIN,Not specifically required in Track A,03_analysis.sql,Track A uses advanced self join instead

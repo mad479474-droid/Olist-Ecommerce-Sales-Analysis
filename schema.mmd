@@ -1,0 +1,35 @@
+erDiagram
+ CUSTOMERS ||--o{ ORDERS : customer_id
+ ORDERS ||--o{ ORDER_ITEMS : order_id
+ ORDERS ||--o{ ORDER_PAYMENTS : order_id
+ ORDERS ||--o{ ORDER_REVIEWS : order_id
+ PRODUCTS ||--o{ ORDER_ITEMS : product_id
+ SELLERS ||--o{ ORDER_ITEMS : seller_id
+ CATEGORY_TRANSLATION ||--o{ PRODUCTS : category_name
+ CUSTOMERS { string customer_id PK
+ string customer_unique_id
+ string customer_state }
+ ORDERS { string order_id PK
+ string customer_id FK
+ datetime order_purchase_timestamp
+ string order_status }
+ ORDER_ITEMS { string order_id PK
+ int order_item_id PK
+ string product_id FK
+ string seller_id FK
+ decimal price
+ decimal freight_value }
+ ORDER_PAYMENTS { string order_id PK
+ int payment_sequential PK
+ string payment_type
+ decimal payment_value }
+ ORDER_REVIEWS { long source_review_row_index PK
+ string review_id
+ string order_id FK
+ int review_score }
+ PRODUCTS { string product_id PK
+ string product_category_name FK }
+ SELLERS { string seller_id PK
+ string seller_state }
+ CATEGORY_TRANSLATION { string product_category_name PK
+ string product_category_name_english }
